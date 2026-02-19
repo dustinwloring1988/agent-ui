@@ -9,13 +9,6 @@
   &nbsp;
   <img src="https://img.shields.io/badge/platform-macOS%20%7C%20Windows%20%7C%20Linux-6C757D?style=flat-square&logo=linux&logoColor=white" alt="Platform">
 </p>
-
-<p align="center">
-  <a href="https://trendshift.io/repositories/15423" target="_blank">
-    <img src="https://trendshift.io/api/badge/repositories/15423" alt="GitHub Trending" height="80">
-  </a>
-</p>
-
 ---
 
 <p align="center">
@@ -43,8 +36,6 @@
 
 <p align="center">
 
-[✨ AionUi로 무엇을 할 수 있나요?](#aionui로-무엇을-할-수-있나요) ·
-[🤔 왜 AionUi를 선택해야 하나요?](#왜-aionui를-선택해야-하나요) ·
 [🚀 빠른 시작](#빠른-시작) ·
 [💬 커뮤니티](#커뮤니티--지원)
 

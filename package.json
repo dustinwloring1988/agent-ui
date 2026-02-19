@@ -1,6 +1,6 @@
 {
-  "name": "AionUi",
-  "productName": "AionUi",
+  "name": "agent-ui",
+  "productName": "Agent UI",
   "version": "1.8.13",
   "description": "Transform your command-line AI agent into a modern, efficient AI Chat interface.",
   "main": ".webpack/main",
@@ -38,8 +38,12 @@
   },
   "keywords": [],
   "author": {
-    "name": "AionUi",
-    "email": "service@aionui.com"
+    "name": "Dustin Loring",
+    "email": "DLoring1988@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dustinwloring1988/agent-ui.git"
   },
   "license": "Apache-2.0",
   "devDependencies": {

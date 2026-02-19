@@ -9,13 +9,6 @@
   &nbsp;
   <img src="https://img.shields.io/badge/platform-macOS%20%7C%20Windows%20%7C%20Linux-6C757D?style=flat-square&logo=linux&logoColor=white" alt="Platform">
 </p>
-
-<p align="center">
-  <a href="https://trendshift.io/repositories/15423" target="_blank">
-    <img src="https://trendshift.io/api/badge/repositories/15423" alt="GitHub Trending" height="80">
-  </a>
-</p>
-
 ---
 
 <p align="center">
@@ -34,7 +27,7 @@
 </p>
 
 <p align="center">
-  <strong>💬 Community:</strong> <a href="https://discord.gg/2QAwJn7Egx" target="_blank">Discord (English)</a> | <a href="./resources/wechat_group.png" target="_blank">微信 (中文群)</a> | <a href="https://twitter.com/AionUI" target="_blank">Twitter</a>
+  <strong>Community:</strong> <a href="https://discord.gg/2QAwJn7Egx" target="_blank">Discord (English)</a> | <a href="./resources/wechat_group.png" target="_blank">微信 (中文群)</a> | <a href="https://twitter.com/AionUI" target="_blank">Twitter</a>
 </p>
 
 ---
@@ -43,30 +36,9 @@
 
 <p align="center">
 
-[✨ Cowork in Action](#cowork-in-action) ·
-[🤔 Why Choose AionUi?](#why-choose-aionui-over-claude-cowork) ·
-[🚀 Quick Start](#quick-start) ·
-[💬 Community](#community--support)
+[Quick Start](#quick-start) ·
+[Community](#community--support)
 
-</p>
-
----
-
-## Cowork — AI Agents That Work Alongside You
-
-**AionUi is more than a chat client.** It's a Cowork platform where AI agents work alongside you on your computer — reading files, writing code, browsing the web, and automating tasks. You see everything the agent does, and you're always in control.
-
-|                                 | Traditional AI Chat Clients | **AionUi (Cowork)**                                                                          |
-| :------------------------------ | :-------------------------- | :------------------------------------------------------------------------------------------- |
-| AI can operate on your files    | Limited or No               | **Yes — built-in agent with full file access**                                               |
-| AI can execute multi-step tasks | Limited                     | **Yes — autonomous with your approval**                                                      |
-| Remote access from phone        | Rarely                      | **WebUI + Telegram / Lark / DingTalk**                                                       |
-| Scheduled automation            | No                          | **Cron — 24/7 unattended**                                                                   |
-| Multiple AI Agents at once      | No                          | **Claude Code, Codex, OpenClaw, Qwen Code, and 12+ more — auto-detected, unified interface** |
-| Price                           | Free / Paid                 | **Free & Open Source**                                                                       |
-
-<p align="center">
-  <img src="./resources/offica-ai BANNER-function.png" alt="AionUi Cowork Platform" width="800">
 </p>
 
 ---
@@ -122,7 +94,7 @@ Same agent capabilities — file read/write, web search, image generation, tool 
 </p>
 
 <details>
-<summary><strong>🔍 View All 20+ Supported Platforms ▶️</strong></summary>
+<summary><strong>View All 20+ Supported Platforms ▶️</strong></summary>
 
 <br>
 
@@ -158,22 +130,22 @@ _Extensible assistant system with 12 built-in professional assistants and custom
 
 AionUi includes **12 professional assistants** with predefined capabilities, extendable through custom skills:
 
-- **🤝 Cowork** — Autonomous task execution (file operations, document processing, workflow planning)
-- **📊 PPTX Generator** — Generate PPTX presentations
-- **📄 PDF to PPT** — Convert PDF to PPT
-- **🎮 3D Game** — Single-file 3D game generation
-- **🎨 UI/UX Pro Max** — Professional UI/UX design (57 styles, 95 color palettes)
-- **📋 Planning with Files** — File-based planning for complex tasks (Manus-style persistent markdown planning)
-- **🧭 HUMAN 3.0 Coach** — Personal development coach
-- **📣 Social Job Publisher** — Job posting and publishing
-- **🦞 moltbook** — Zero-deployment AI agent social networking
-- **📈 Beautiful Mermaid** — Flowcharts, sequence diagrams, and more
-- **🔧 OpenClaw Setup** — Setup and configuration assistant for OpenClaw integration
-- **📖 Story Roleplay** — Immersive story roleplay with character cards and world info (SillyTavern compatible)
+- **Cowork** — Autonomous task execution (file operations, document processing, workflow planning)
+- **PPTX Generator** — Generate PPTX presentations
+- **PDF to PPT** — Convert PDF to PPT
+- **3D Game** — Single-file 3D game generation
+- **UI/UX Pro Max** — Professional UI/UX design (57 styles, 95 color palettes)
+- **Planning with Files** — File-based planning for complex tasks (Manus-style persistent markdown planning)
+- **HUMAN 3.0 Coach** — Personal development coach
+- **Social Job Publisher** — Job posting and publishing
+- **moltbook** — Zero-deployment AI agent social networking
+- **Beautiful Mermaid** — Flowcharts, sequence diagrams, and more
+- **OpenClaw Setup** — Setup and configuration assistant for OpenClaw integration
+- **Story Roleplay** — Immersive story roleplay with character cards and world info (SillyTavern compatible)
 
 **Custom Skills**: Create skills in the `skills/` directory, enable/disable skills for assistants to extend AI capabilities. Built-in skills include `pptx`, `docx`, `pdf`, `xlsx`, `mermaid`, and more.
 
-> 💡 Each assistant is defined by a markdown file. Check the `assistant/` directory for examples.
+> Each assistant is defined by a markdown file. Check the `assistant/` directory for examples.
 
 </details>
 
@@ -201,7 +173,7 @@ _Your 24/7 AI assistant — access AionUi from any device, anywhere._
 
 </details>
 
-## ✨ Cowork in Action
+## Cowork in Action
 
 ### **Scheduled Tasks — Cowork on Autopilot**
 
@@ -216,7 +188,7 @@ _Set it up once, the AI agent runs automatically on schedule — truly 24/7 unat
 </p>
 
 <details>
-<summary><strong>🔍 View Scheduled Task Details ▶️</strong></summary>
+<summary><strong>View Scheduled Task Details ▶️</strong></summary>
 
 <br>
 
@@ -234,7 +206,7 @@ _Set it up once, the AI agent runs automatically on schedule — truly 24/7 unat
 </details>
 
 <details>
-<summary><strong>🔍 View Complete Format List and Features Details ▶️</strong></summary>
+<summary><strong>View Complete Format List and Features Details ▶️</strong></summary>
 
 <br>
 
@@ -271,7 +243,7 @@ _10+ formats: PDF, Word, Excel, PPT, code, Markdown, images, HTML, Diff — view
 </p>
 
 <details>
-<summary><strong>🔍 View Complete Format List ▶️</strong></summary>
+<summary><strong>View Complete Format List ▶️</strong></summary>
 
 <br>
 
@@ -296,7 +268,7 @@ _Batch renaming, automatic organization, smart classification, file merging — 
 </p>
 
 <details>
-<summary><strong>🔍 View File Management Features Details ▶️</strong></summary>
+<summary><strong>View File Management Features Details ▶️</strong></summary>
 
 <br>
 
@@ -324,7 +296,7 @@ _Deeply analyze Excel data, automatically beautify reports, and generate insight
 </p>
 
 <details>
-<summary><strong>🔍 View Excel Processing Features ▶️</strong></summary>
+<summary><strong>View Excel Processing Features ▶️</strong></summary>
 
 <br>
 
@@ -354,7 +326,7 @@ _Intelligent image generation, editing, and recognition, powered by Gemini_
 </p>
 
 <details>
-<summary><strong>🔍 View Image Generation Features ▶️</strong></summary>
+<summary><strong>View Image Generation Features ▶️</strong></summary>
 
 <br>
 
@@ -378,7 +350,7 @@ _Automatically generate professional documents — presentations, reports, and m
 </p>
 
 <details>
-<summary><strong>🔍 View Document Generation Features ▶️</strong></summary>
+<summary><strong>View Document Generation Features ▶️</strong></summary>
 
 <br>
 
@@ -422,7 +394,7 @@ _Open multiple conversations, tasks don't get mixed up, independent memory, doub
 
 ---
 
-## 🤔 Why Choose AionUi Over Claude Cowork?
+## Why Choose AionUi Over Claude Cowork?
 
 <details>
 <summary><strong>Click to see detailed comparison</strong></summary>
@@ -499,7 +471,7 @@ A: All data is stored locally in a SQLite database. Nothing is uploaded to any s
 
 ---
 
-## 🚀 Quick Start
+## Quick Start
 
 ### System Requirements
 
@@ -528,52 +500,38 @@ brew install aionui
 2. **Sign in** with Google account or enter any API key
 3. **Start Coworking** — the built-in AI agent is ready to go
 
-### 📖 Detailed Guides
+### Detailed Guides
 
 <details>
-<summary><strong>📖 Expand to View Complete Usage Guide</strong></summary>
+<summary><strong>Expand to View Complete Usage Guide</strong></summary>
 
 <br>
 
-**🚀 Quick Start**
+**Quick Start**
 
-- [📖 Complete Installation Guide](https://github.com/iOfficeAI/AionUi/wiki/Getting-Started) — Detailed steps from download to configuration
-- [⚙️ LLM Configuration Guide](https://github.com/iOfficeAI/AionUi/wiki/LLM-Configuration) — Multi-platform AI model configuration
-- [🤖 Multi-Agent Mode Setup](https://github.com/iOfficeAI/AionUi/wiki/ACP-Setup) — Integrate terminal AI agents
-- [🔌 MCP Tool Configuration](https://github.com/iOfficeAI/AionUi/wiki/MCP-Configuration-Guide) — Model Context Protocol server setup
-- [🌐 WebUI Configuration Guide](https://github.com/iOfficeAI/AionUi/wiki/WebUI-Configuration-Guide) — Complete WebUI setup and configuration tutorial
+- [Complete Installation Guide](https://github.com/iOfficeAI/AionUi/wiki/Getting-Started) — Detailed steps from download to configuration
+- [LLM Configuration Guide](https://github.com/iOfficeAI/AionUi/wiki/LLM-Configuration) — Multi-platform AI model configuration
+- [Multi-Agent Mode Setup](https://github.com/iOfficeAI/AionUi/wiki/ACP-Setup) — Integrate terminal AI agents
+- [MCP Tool Configuration](https://github.com/iOfficeAI/AionUi/wiki/MCP-Configuration-Guide) — Model Context Protocol server setup
+- [WebUI Configuration Guide](https://github.com/iOfficeAI/AionUi/wiki/WebUI-Configuration-Guide) — Complete WebUI setup and configuration tutorial
 
-**🎯 Use Cases**
+**Use Cases**
 
-- [📁 File Management](https://github.com/iOfficeAI/AionUi/wiki/file-management) — Smart file organization
-- [📊 Excel Processing](https://github.com/iOfficeAI/AionUi/wiki/excel-processing) — AI-driven data processing
-- [🎨 Image Generation](https://github.com/iOfficeAI/AionUi/wiki/AionUi-Image-Generation-Tool-Model-Configuration-Guide) — AI image creation
-- [📚 More Use Cases](https://github.com/iOfficeAI/AionUi/wiki/Use-Cases-Overview)
+- [File Management](https://github.com/iOfficeAI/AionUi/wiki/file-management) — Smart file organization
+- [Excel Processing](https://github.com/iOfficeAI/AionUi/wiki/excel-processing) — AI-driven data processing
+- [Image Generation](https://github.com/iOfficeAI/AionUi/wiki/AionUi-Image-Generation-Tool-Model-Configuration-Guide) — AI image creation
+- [More Use Cases](https://github.com/iOfficeAI/AionUi/wiki/Use-Cases-Overview)
 
-**❓ Support & Help**
+**Support & Help**
 
-- [❓ FAQ](https://github.com/iOfficeAI/AionUi/wiki/FAQ) — Questions and troubleshooting
-- [🔧 Configuration & Usage Tutorials](https://github.com/iOfficeAI/AionUi/wiki/Configuration-Guides) — Complete configuration documentation
+- [FAQ](https://github.com/iOfficeAI/AionUi/wiki/FAQ) — Questions and troubleshooting
+- [Configuration & Usage Tutorials](https://github.com/iOfficeAI/AionUi/wiki/Configuration-Guides) — Complete configuration documentation
 
 </details>
 
 ---
 
-## 💬 Community & Support
-
-**Your ideas matter!** We value every suggestion and feedback.
-
-<p align="center">
-  <a href="https://x.com/AionUi" target="_blank">
-    <img src="./resources/contactus-x.png" alt="Contact Us on X" width="600">
-  </a>
-</p>
-
-- [GitHub Discussions](https://github.com/iOfficeAI/AionUi/discussions) — share ideas and exchange tips
-- [Report Issues](https://github.com/iOfficeAI/AionUi/issues) — bugs and feature requests
-- [Release Updates](https://github.com/iOfficeAI/AionUi/releases) — get the latest version
-- [Discord Community](https://discord.gg/2QAwJn7Egx) — English community
-- [WeChat Group](./resources/wechat_group.png) — Chinese community
+## Community & Support
 
 ### Contributing
 
