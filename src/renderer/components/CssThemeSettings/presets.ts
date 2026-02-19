@@ -8,13 +8,14 @@ import type { ICssTheme } from '@/common/storage';
 
 // 导入预设主题封面图片 base64 数据 / Import preset theme cover images as base64 data
 // 注意: webpack 存在 UTF-8 编码问题会损坏二进制文件，因此使用预生成的 base64 数据
-import { defaultThemeCover, misakaMikotoCover, helloKittyCover, retroWindowsCover } from './themeCovers';
+import { defaultThemeCover, misakaMikotoCover, helloKittyCover, retroWindowsCover, agentThemeCover } from './themeCovers';
 
 /**
  * 默认主题 ID / Default theme ID
  * 用于标识默认主题（无自定义 CSS）/ Used to identify the default theme (no custom CSS)
+ * 现在使用 Agent 主题作为默认 / Now using Agent theme as default
  */
-export const DEFAULT_THEME_ID = 'default-theme';
+export const DEFAULT_THEME_ID = 'agent-theme';
 
 /**
  * 预设 CSS 主题列表 / Preset CSS themes list
@@ -204,6 +205,760 @@ export const PRESET_THEMES: ICssTheme[] = [
   --message-tips-bg: #1a2333;
   --workspace-btn-bg: #1f1f1f;
 }`,
+    createdAt: Date.now(),
+    updatedAt: Date.now(),
+  },
+  {
+    id: 'agent-theme',
+    name: 'Agent',
+    isPreset: true,
+    cover: agentThemeCover,
+    css: `
+/* ========================================
+   Agent Theme - James Bond 007 Inspired
+   Sophisticated dark theme with gold accents
+   ======================================== */
+
+/* ==================== Light Mode ==================== */
+:root {
+  /* ===== Primary - Distinctive Deep Teal & Gold ===== */
+  --agent-primary: #0d9488;
+  --agent-primary-light: #14b8a6;
+  --agent-primary-lighter: #2dd4bf;
+  --agent-primary-lightest: #5eead4;
+  --agent-primary-dark: #0f766e;
+  --agent-primary-darker: #115e59;
+  --agent-primary-rgb: 13, 148, 136;
+
+  /* ===== Gold Accents ===== */
+  --agent-gold: #d4af37;
+  --agent-gold-light: #e6c547;
+  --agent-gold-dark: #b8962e;
+  --agent-gold-rgb: 212, 175, 55;
+
+  /* ===== Brand Colors ===== */
+  --brand: var(--agent-primary);
+  --brand-light: #ccfbf1;
+  --brand-hover: #14b8a6;
+  --color-brand-fill: var(--agent-primary);
+  --color-brand-bg: #ccfbf1;
+
+  /* ===== AOU Brand Colors - Teal Based ===== */
+  --aou-1: #f0fdfa;
+  --aou-2: #ccfbf1;
+  --aou-3: #99f6e4;
+  --aou-4: #5eead4;
+  --aou-5: #2dd4bf;
+  --aou-6: #14b8a6;
+  --aou-7: #0d9488;
+  --aou-8: #0f766e;
+  --aou-9: #115e59;
+  --aou-10: #042f2e;
+
+  /* ===== Background Colors ===== */
+  --bg-base: #ffffff;
+  --bg-1: #fafafa;
+  --bg-2: #f5f5f4;
+  --bg-3: #e7e5e4;
+  --bg-4: #d6d3d1;
+  --bg-5: #a8a29e;
+  --bg-6: #78716c;
+  --bg-8: #57534e;
+  --bg-9: #292524;
+  --bg-10: #1c1917;
+
+  /* ===== Interactive State Colors ===== */
+  --bg-hover: #f5f5f4;
+  --bg-active: #e7e5e4;
+
+  /* ===== Fill Colors ===== */
+  --fill: #fafafa;
+  --color-fill: #fafafa;
+  --fill-0: #ffffff;
+  --fill-white-to-black: #ffffff;
+  --dialog-fill-0: #ffffff;
+  --inverse: #ffffff;
+
+  /* ===== Text Colors ===== */
+  --text-0: #000000;
+  --text-primary: #1c1917;
+  --text-secondary: #57534e;
+  --text-disabled: #a8a29e;
+  --text-white: #ffffff;
+  --color-text-1: #1c1917;
+  --color-text-2: #57534e;
+  --color-text-3: #a8a29e;
+  --color-text-4: #d6d3d1;
+
+  /* ===== Border Colors ===== */
+  --border-base: #e7e5e4;
+  --border-light: #f5f5f4;
+  --border-special: #d6d3d1;
+  --color-border: #e7e5e4;
+  --color-border-1: #e7e5e4;
+  --color-border-2: #f5f5f4;
+
+  /* ===== Semantic Colors ===== */
+  --success: #22c55e;
+  --warning: #f59e0b;
+  --danger: #ef4444;
+  --info: var(--agent-primary);
+
+  /* ===== Shadows ===== */
+  --agent-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --agent-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --agent-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --agent-shadow-gold: 0 0 20px rgba(212, 175, 55, 0.3);
+
+  /* ===== Gradients ===== */
+  --gradient-gold: linear-gradient(135deg, #d4af37 0%, #e6c547 50%, #d4af37 100%);
+  --gradient-teal: linear-gradient(135deg, #0d9488 0%, #14b8a6 100%);
+  --gradient-dark: linear-gradient(135deg, #1c1917 0%, #292524 100%);
+
+  /* ===== Message Colors ===== */
+  --message-user-bg: #ccfbf1;
+  --message-tips-bg: #f0fdfa;
+  --workspace-btn-bg: #f5f5f4;
+}
+
+/* ===== Typography ===== */
+body {
+  font-family: "Outfit", "SF Pro Display", "Segoe UI", "Microsoft YaHei", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ===== Global Background ===== */
+body,
+html {
+  background-color: var(--bg-1);
+  color: var(--text-primary);
+}
+
+.arco-layout,
+[class*="layout"] {
+  background-color: var(--bg-1);
+}
+
+.arco-layout-content {
+  background-color: var(--bg-1);
+}
+
+/* ===== Background with Subtle Pattern ===== */
+.layout-content.bg-1 {
+  position: relative;
+  background-color: var(--bg-1);
+}
+
+/* Subtle gold shimmer overlay */
+.layout-content.bg-1::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(ellipse at top right, rgba(212, 175, 55, 0.03) 0%, transparent 50%),
+    radial-gradient(ellipse at bottom left, rgba(13, 148, 136, 0.03) 0%, transparent 50%);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.layout-content.bg-1 > * {
+  position: relative;
+  z-index: 1;
+}
+
+[class*="chat-layout"] .arco-layout-content,
+[class*="conversation"] .arco-layout-content {
+  position: relative;
+}
+
+[class*="chat-layout"] .arco-layout-content::before,
+[class*="conversation"] .arco-layout-content::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: 
+    radial-gradient(ellipse at top right, rgba(212, 175, 55, 0.02) 0%, transparent 50%),
+    radial-gradient(ellipse at bottom left, rgba(13, 148, 136, 0.02) 0%, transparent 50%);
+  z-index: 0;
+  pointer-events: none;
+}
+
+[class*="chat-layout"] .arco-layout-content > *,
+[class*="conversation"] .arco-layout-content > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* ==================== Sidebar ==================== */
+.layout-sider {
+  background-color: var(--bg-2);
+  border-right: 1px solid var(--border-base);
+}
+
+.layout-sider-header {
+  background: var(--gradient-teal);
+  color: white;
+  box-shadow: var(--agent-shadow-md);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Sidebar Icons */
+.layout-sider-header svg {
+  color: rgba(255, 255, 255, 0.9);
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.layout-sider-header svg:hover {
+  color: var(--agent-gold-light);
+  transform: scale(1.1);
+}
+
+/* ==================== Input ==================== */
+.guidInputCard {
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--border-base);
+  border-radius: 12px;
+  box-shadow: var(--agent-shadow-lg);
+  transition: all 0.3s ease;
+}
+
+.guidInputCard:hover {
+  border-color: var(--agent-primary);
+  box-shadow: var(--agent-shadow-lg), 0 0 0 1px var(--agent-primary);
+}
+
+.guidInputCard textarea {
+  background-color: transparent;
+  color: var(--text-primary);
+  border: none;
+}
+
+/* Sendbox */
+.sendbox-container {
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--border-base);
+  border-radius: 16px;
+  box-shadow: var(--agent-shadow-md);
+  transition: all 0.3s ease;
+}
+
+.sendbox-container:focus-within {
+  border-color: var(--agent-primary);
+  box-shadow: var(--agent-shadow-lg), 0 0 0 2px rgba(13, 148, 136, 0.2);
+  transform: translateY(-1px);
+}
+
+.sendbox-container textarea {
+  background: transparent;
+  border: none;
+  color: var(--text-primary);
+}
+
+/* ==================== Message ==================== */
+.message-item.user .message-bubble,
+[class*="message-user"] .message-content {
+  background: var(--gradient-teal);
+  color: white;
+  border-radius: 20px 20px 4px 20px;
+  box-shadow: var(--agent-shadow-md);
+  padding: 12px 18px;
+  border: none;
+}
+
+.message-item.ai .message-bubble,
+.message-item.assistant .message-bubble,
+[class*="message-ai"] .message-content,
+[class*="message-assistant"] .message-content {
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--border-base);
+  border-radius: 20px 20px 20px 4px;
+  box-shadow: var(--agent-shadow-sm);
+  padding: 12px 18px;
+  color: var(--text-primary);
+}
+
+/* Tool calls */
+.message-item.ai .arco-alert,
+.message-item.assistant .arco-alert {
+  background-color: rgba(255, 255, 255, 0.7);
+  border: 1px solid var(--border-base);
+  border-radius: 8px;
+  margin: 8px 0;
+}
+
+.message-item.ai .arco-card,
+.message-item.assistant .arco-card {
+  background-color: rgba(255, 255, 255, 0.7);
+  border: 1px solid var(--border-base);
+  border-radius: 8px;
+  margin: 8px 0;
+}
+
+/* ==================== Button ==================== */
+.arco-btn-primary,
+button[type="primary"] {
+  background: var(--gradient-teal);
+  border: none;
+  border-radius: 12px;
+  color: white;
+  font-weight: 600;
+  box-shadow: var(--agent-shadow-sm);
+  transition: all 0.3s ease;
+}
+
+.arco-btn-primary:hover,
+button[type="primary"]:hover {
+  background: var(--gradient-teal);
+  box-shadow: var(--agent-shadow-md), var(--agent-shadow-gold);
+  transform: translateY(-2px);
+}
+
+.arco-btn-primary:active,
+button[type="primary"]:active {
+  transform: translateY(0);
+  box-shadow: var(--agent-shadow-sm);
+}
+
+.arco-btn-secondary,
+button[type="secondary"] {
+  background: transparent;
+  border: 2px solid var(--agent-primary);
+  border-radius: 12px;
+  color: var(--agent-primary);
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.arco-btn-secondary:hover,
+button[type="secondary"]:hover {
+  background: var(--brand-light);
+  border-color: var(--agent-primary-light);
+  color: var(--agent-primary-light);
+  transform: translateY(-1px);
+}
+
+/* ==================== Icon ==================== */
+.arco-icon {
+  color: var(--agent-primary);
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.arco-icon:hover {
+  color: var(--agent-primary-light);
+  transform: scale(1.1);
+}
+
+.arco-btn-primary .arco-icon,
+button[type="primary"] .arco-icon {
+  color: white;
+}
+
+/* ==================== Scrollbar ==================== */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: transparent;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+*:hover::-webkit-scrollbar-thumb {
+  background: rgba(13, 148, 136, 0.3);
+}
+
+*:hover::-webkit-scrollbar-thumb:hover {
+  background: var(--gradient-teal);
+}
+
+/* ==================== Other Elements ==================== */
+a {
+  color: var(--agent-primary);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--agent-primary-light);
+  text-decoration: underline;
+}
+
+::selection {
+  background-color: var(--agent-primary);
+  color: white;
+}
+
+/* Tooltip */
+.arco-tooltip-inner,
+.arco-popover-inner {
+  background-color: var(--agent-primary-dark);
+  color: white;
+  border: 1px solid var(--agent-gold);
+  border-radius: 8px;
+  box-shadow: var(--agent-shadow-lg);
+  font-weight: 500;
+}
+
+.arco-tooltip-arrow,
+.arco-popover-arrow {
+  border-color: var(--agent-primary-dark);
+}
+
+/* Modal */
+.arco-modal-header {
+  background: var(--gradient-teal);
+  border-bottom: 1px solid var(--agent-primary-dark);
+  color: white;
+}
+
+.arco-modal-body {
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(10px);
+  color: var(--text-primary);
+}
+
+.arco-modal-footer {
+  background: rgba(255, 255, 255, 0.98);
+  border-top: 1px solid var(--border-base);
+}
+
+/* ==================== Dark Mode ==================== */
+[data-theme='dark'] {
+  /* ===== Primary - Dark Mode ===== */
+  --agent-primary: #2dd4bf;
+  --agent-primary-light: #5eead4;
+  --agent-primary-lighter: #99f6e4;
+  --agent-primary-lightest: #ccfbf1;
+  --agent-primary-dark: #14b8a6;
+  --agent-primary-darker: #0d9488;
+  --agent-primary-rgb: 45, 212, 191;
+
+  /* ===== Gold Accents - Dark Mode ===== */
+  --agent-gold: #f0c040;
+  --agent-gold-light: #f5d76e;
+  --agent-gold-dark: #d4af37;
+  --agent-gold-rgb: 240, 192, 64;
+
+  /* ===== Brand Colors - Dark Mode ===== */
+  --brand: var(--agent-primary);
+  --brand-light: #134e4a;
+  --brand-hover: var(--agent-primary-light);
+  --color-brand-fill: var(--agent-primary);
+  --color-brand-bg: #134e4a;
+
+  /* ===== AOU Colors - Dark Mode ===== */
+  --aou-1: #042f2e;
+  --aou-2: #115e59;
+  --aou-3: #134e4a;
+  --aou-4: #115e59;
+  --aou-5: #0d9488;
+  --aou-6: #14b8a6;
+  --aou-7: #2dd4bf;
+  --aou-8: #5eead4;
+  --aou-9: #99f6e4;
+  --aou-10: #ccfbf1;
+
+  /* ===== Background Colors - Dark Mode ===== */
+  --bg-base: #0c0a09;
+  --bg-1: #0c0a09;
+  --bg-2: #1c1917;
+  --bg-3: #292524;
+  --bg-4: #44403c;
+  --bg-5: #57534e;
+  --bg-6: #78716c;
+  --bg-8: #a8a29e;
+  --bg-9: #d6d3d1;
+  --bg-10: #fafaf9;
+
+  /* ===== Interactive States ===== */
+  --bg-hover: #1c1917;
+  --bg-active: #292524;
+
+  /* ===== Fill Colors ===== */
+  --fill: #0c0a09;
+  --color-fill: #0c0a09;
+  --fill-0: rgba(255, 255, 255, 0.08);
+  --fill-white-to-black: #000000;
+  --dialog-fill-0: #1c1917;
+
+  /* ===== Text Colors ===== */
+  --text-0: #ffffff;
+  --text-primary: #fafaf9;
+  --text-secondary: #a8a29e;
+  --text-disabled: #78716c;
+  --text-white: #ffffff;
+  --color-text-1: #fafaf9;
+  --color-text-2: #a8a29e;
+  --color-text-3: #78716c;
+  --color-text-4: #57534e;
+
+  /* ===== Border Colors ===== */
+  --border-base: #44403c;
+  --border-light: #292524;
+  --border-special: #78716c;
+  --color-border: #44403c;
+  --color-border-1: #44403c;
+  --color-border-2: #292524;
+
+  /* ===== Semantic Colors ===== */
+  --success: #4ade80;
+  --warning: #fbbf24;
+  --danger: #f87171;
+  --info: var(--agent-primary);
+
+  /* ===== Message Colors ===== */
+  --message-user-bg: #134e4a;
+  --message-tips-bg: #042f2e;
+  --workspace-btn-bg: #1c1917;
+}
+
+/* ===== Dark Mode Global ===== */
+[data-theme='dark'] body,
+[data-theme='dark'] html {
+  background-color: var(--bg-1);
+  color: var(--text-primary);
+}
+
+[data-theme='dark'] .arco-layout,
+[data-theme='dark'] [class*="layout"] {
+  background-color: var(--bg-1);
+}
+
+[data-theme='dark'] .arco-layout-content {
+  background-color: var(--bg-1);
+}
+
+/* ===== Dark Mode Background ===== */
+[data-theme='dark'] .layout-content.bg-1::before {
+  background: 
+    radial-gradient(ellipse at top right, rgba(240, 192, 64, 0.05) 0%, transparent 50%),
+    radial-gradient(ellipse at bottom left, rgba(45, 212, 191, 0.05) 0%, transparent 50%);
+}
+
+[data-theme='dark'] [class*="chat-layout"] .arco-layout-content::before,
+[data-theme='dark'] [class*="conversation"] .arco-layout-content::before {
+  opacity: 0.3;
+  filter: brightness(1.1) saturate(1.2);
+}
+
+/* ===== Dark Mode Sidebar ===== */
+[data-theme='dark'] .layout-sider {
+  background: linear-gradient(180deg, #134e4a 0%, #1c1917 100%);
+  border-right: 1px solid var(--agent-primary-dark);
+  box-shadow: 4px 0 20px rgba(45, 212, 191, 0.1);
+}
+
+[data-theme='dark'] .layout-sider-header {
+  background: linear-gradient(135deg, #0d9488 0%, #14b8a6 100%);
+  box-shadow: 0 4px 12px rgba(45, 212, 191, 0.3);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+[data-theme='dark'] .layout-sider-header svg {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+[data-theme='dark'] .layout-sider-header svg:hover {
+  color: var(--agent-gold-light);
+  filter: drop-shadow(0 0 8px rgba(240, 192, 64, 0.5));
+}
+
+/* ===== Dark Mode Input ===== */
+[data-theme='dark'] .guidInputCard {
+  background: linear-gradient(135deg, rgba(19, 78, 74, 0.9) 0%, rgba(28, 25, 23, 0.9) 100%);
+  border: 2px solid var(--agent-primary-dark);
+  box-shadow: 0 8px 32px rgba(45, 212, 191, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+[data-theme='dark'] .guidInputCard:hover {
+  border-color: var(--agent-primary);
+  box-shadow: 0 8px 32px rgba(45, 212, 191, 0.25), var(--agent-shadow-gold);
+}
+
+[data-theme='dark'] .guidInputCard textarea {
+  background-color: rgba(19, 78, 74, 0.6);
+  color: var(--text-primary);
+}
+
+[data-theme='dark'] .sendbox-container {
+  background: linear-gradient(135deg, rgba(19, 78, 74, 0.9) 0%, rgba(28, 25, 23, 0.9) 100%);
+  border: 2px solid var(--agent-primary-dark);
+  box-shadow: 0 8px 24px rgba(45, 212, 191, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+[data-theme='dark'] .sendbox-container:focus-within {
+  border-color: var(--agent-primary);
+  box-shadow: 0 8px 32px rgba(45, 212, 191, 0.3), 0 0 20px rgba(45, 212, 191, 0.2);
+  transform: translateY(-2px);
+}
+
+/* ===== Dark Mode Messages ===== */
+[data-theme='dark'] .message-item.user .message-bubble,
+[data-theme='dark'] [class*="message-user"] .message-content {
+  background: linear-gradient(135deg, #0d9488 0%, #14b8a6 50%, #2dd4bf 100%);
+  box-shadow: 0 6px 20px rgba(45, 212, 191, 0.4), 0 0 0 2px rgba(45, 212, 191, 0.2);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+[data-theme='dark'] .message-item.ai .message-bubble,
+[data-theme='dark'] [class*="message-ai"] .message-content,
+[data-theme='dark'] [class*="message-assistant"] .message-content {
+  background: linear-gradient(135deg, rgba(19, 78, 74, 0.9) 0%, rgba(28, 25, 23, 0.9) 100%);
+  border: 2px solid var(--agent-primary-dark);
+  box-shadow: 0 6px 20px rgba(45, 212, 191, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+/* ===== Dark Mode Button ===== */
+[data-theme='dark'] .arco-btn-primary,
+[data-theme='dark'] button[type="primary"] {
+  background: var(--gradient-teal);
+  border-color: var(--agent-primary-dark);
+  box-shadow: 0 4px 12px rgba(45, 212, 191, 0.3);
+}
+
+[data-theme='dark'] .arco-btn-primary:hover,
+[data-theme='dark'] button[type="primary"]:hover {
+  background: linear-gradient(135deg, #14b8a6 0%, #2dd4bf 100%);
+  box-shadow: 0 8px 24px rgba(45, 212, 191, 0.5), var(--agent-shadow-gold);
+  transform: translateY(-2px);
+}
+
+[data-theme='dark'] .arco-btn-secondary,
+[data-theme='dark'] button[type="secondary"] {
+  border-color: var(--agent-primary);
+  color: var(--agent-primary);
+}
+
+[data-theme='dark'] .arco-btn-secondary:hover,
+[data-theme='dark'] button[type="secondary"]:hover {
+  background: rgba(45, 212, 191, 0.1);
+  border-color: var(--agent-primary-light);
+  color: var(--agent-primary-light);
+  box-shadow: 0 0 12px rgba(45, 212, 191, 0.3);
+}
+
+/* ===== Dark Mode Icon ===== */
+[data-theme='dark'] .arco-icon {
+  color: var(--agent-primary);
+}
+
+[data-theme='dark'] .arco-icon:hover {
+  color: var(--agent-primary-light);
+  filter: drop-shadow(0 0 8px rgba(45, 212, 191, 0.5));
+}
+
+/* ===== Dark Mode Scrollbar ===== */
+[data-theme='dark'] *:hover::-webkit-scrollbar-thumb {
+  background: rgba(45, 212, 191, 0.4);
+}
+
+[data-theme='dark'] *:hover::-webkit-scrollbar-thumb:hover {
+  background: var(--gradient-teal);
+  box-shadow: 0 0 8px rgba(45, 212, 191, 0.5);
+}
+
+/* ===== Dark Mode Selection ===== */
+[data-theme='dark'] ::selection {
+  background-color: var(--agent-primary-dark);
+  text-shadow: 0 0 4px rgba(13, 148, 136, 0.5);
+}
+
+/* ===== Dark Mode Link ===== */
+[data-theme='dark'] a {
+  color: var(--agent-primary);
+  text-decoration-color: rgba(45, 212, 191, 0.4);
+}
+
+[data-theme='dark'] a:hover {
+  color: var(--agent-primary-light);
+  text-shadow: 0 0 8px rgba(45, 212, 191, 0.4);
+}
+
+/* ===== Dark Mode Tooltip ===== */
+[data-theme='dark'] .arco-tooltip-inner,
+[data-theme='dark'] .arco-popover-inner {
+  background: linear-gradient(135deg, #134e4a 0%, #0f766e 100%);
+  color: white;
+  border: 2px solid var(--agent-gold);
+  box-shadow: 0 6px 20px rgba(45, 212, 191, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+[data-theme='dark'] .arco-tooltip-arrow,
+[data-theme='dark'] .arco-popover-arrow {
+  border-color: #134e4a;
+}
+
+/* ===== Dark Mode Modal ===== */
+[data-theme='dark'] .arco-modal,
+[data-theme='dark'] .arco-modal-wrapper {
+  color: var(--text-primary);
+}
+
+[data-theme='dark'] .arco-modal-body {
+  background: linear-gradient(135deg, rgba(19, 78, 74, 0.98) 0%, rgba(28, 25, 23, 0.98) 100%);
+  backdrop-filter: blur(20px);
+}
+
+[data-theme='dark'] .arco-modal-header {
+  background: var(--gradient-teal);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 2px 8px rgba(45, 212, 191, 0.2);
+}
+
+[data-theme='dark'] .arco-modal-footer {
+  background: linear-gradient(135deg, rgba(19, 78, 74, 0.98) 0%, rgba(28, 25, 23, 0.98) 100%);
+  border-top: 2px solid var(--agent-primary-dark);
+}
+
+/* ===== Animation ===== */
+@keyframes agent-pulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 8px rgba(212, 175, 55, 0);
+  }
+}
+
+.arco-btn-primary:hover {
+  animation: agent-pulse 2s ease-in-out infinite;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .guidInputCard,
+  .sendbox-container {
+    border-radius: 12px;
+  }
+
+  .message-item.user .message-bubble,
+  .message-item.ai .message-bubble,
+  .message-item.assistant .message-bubble {
+    border-radius: 16px;
+    padding: 10px 14px;
+  }
+
+  .arco-btn-primary,
+  .arco-btn-secondary {
+    border-radius: 12px;
+    padding: 8px 16px;
+  }
+}
+`,
     createdAt: Date.now(),
     updatedAt: Date.now(),
   },
