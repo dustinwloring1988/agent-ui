@@ -8,7 +8,7 @@ import type { ICssTheme } from '@/common/storage';
 
 // 导入预设主题封面图片 base64 数据 / Import preset theme cover images as base64 data
 // 注意: webpack 存在 UTF-8 编码问题会损坏二进制文件，因此使用预生成的 base64 数据
-import { misakaMikotoCover, retroWindowsCover, agentThemeCover } from './themeCovers';
+import { defaultThemeCover, misakaMikotoCover, retroWindowsCover } from './themeCovers';
 
 /**
  * 默认主题 ID / Default theme ID
@@ -26,7 +26,7 @@ export const PRESET_THEMES: ICssTheme[] = [
     id: 'agent-theme',
     name: 'Agent',
     isPreset: true,
-    cover: agentThemeCover,
+    cover: defaultThemeCover,
     css: `
 /* ========================================
    Agent Theme - James Bond 007 Inspired
