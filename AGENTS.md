@@ -1,4 +1,4 @@
-# AionUi - Project Guide for Claude
+# AionUi - Agent Project Guide
 
 ## Project Overview
 
@@ -86,6 +86,7 @@ npm run webui          # Start WebUI server
 npm run lint           # Run ESLint
 npm run lint:fix       # Auto-fix lint issues
 npm run format         # Format with Prettier
+npm run format:check   # Check code formatting
 
 # Testing
 npm test               # Run all tests
@@ -132,6 +133,21 @@ npm run dist:linux     # Linux build
 - English for code comments
 - JSDoc for function documentation
 
+### ESLint Rules
+
+- TypeScript support
+- Import rules checking
+- Line length limit: 120 characters
+- Unused variables checking
+- Type safety checking
+
+### Prettier Rules
+
+- Single quotes
+- Semicolons
+- 2-space indentation
+- Line length limit: 700 characters
+
 ## Git Conventions
 
 ### Commit Messages
@@ -158,6 +174,13 @@ chore: remove debug console.log statements
 - Any other AI tool signatures or attributions
 
 This is a strict rule. Violating this will pollute the git history.
+
+### Git Hooks
+
+Project configured with Git hooks for code quality:
+
+1. **pre-commit**: Auto-run lint-staged before commit
+2. **commit-msg**: Validate commit message format
 
 ## Architecture Notes
 
@@ -199,18 +222,6 @@ Supported languages: English (en-US), Chinese Simplified (zh-CN), Chinese Tradit
 
 Translation files: `src/renderer/i18n/locales/*.json`
 
----
-
-## Skills Index
-
-Detailed rules and guidelines are organized into Skills for better modularity:
-
-| Skill    | Purpose                                                              | Triggers                                               |
-| -------- | -------------------------------------------------------------------- | ------------------------------------------------------ |
-| **i18n** | Key naming, sync checking, hardcoded detection, translation workflow | Adding user-facing text, creating components with text |
-
-> Skills are located in `.claude/skills/` and loaded automatically when relevant.
-
 ## Key Configuration Files
 
 | File               | Purpose                     |
@@ -237,3 +248,24 @@ The following require special handling during build:
 - `tree-sitter` - Code parsing
 
 These are configured as externals in Webpack.
+
+## IDE Integration
+
+### VS Code
+
+Recommended extensions:
+
+- ESLint
+- Prettier - Code formatter
+
+Settings:
+
+```json
+{
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  }
+}
+```
