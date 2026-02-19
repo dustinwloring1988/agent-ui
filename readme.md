@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./resources/aionui-banner-1.png" alt="AionUi - Cowork with AI Agents" width="100%">
+  <img src="./resources/agent-banner-1.png" alt="AgentUi - Cowork with AI Agents" width="100%">
 </p>
 
 <p align="center">
