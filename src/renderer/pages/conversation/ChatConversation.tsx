@@ -23,7 +23,6 @@ import ChatLayout from './ChatLayout';
 import ChatSider from './ChatSider';
 import CodexChat from './codex/CodexChat';
 import NanobotChat from './nanobot/NanobotChat';
-import OpenClawChat from './openclaw/OpenClawChat';
 import GeminiChat from './gemini/GeminiChat';
 import GeminiModelSelector from './gemini/GeminiModelSelector';
 import { useGeminiModelSelection } from './gemini/useGeminiModelSelection';
@@ -149,8 +148,6 @@ const ChatConversation: React.FC<{
         return <AcpChat key={conversation.id} conversation_id={conversation.id} workspace={conversation.extra?.workspace} backend={conversation.extra?.backend || 'claude'}></AcpChat>;
       case 'codex':
         return <CodexChat key={conversation.id} conversation_id={conversation.id} workspace={conversation.extra?.workspace} />;
-      case 'openclaw-gateway':
-        return <OpenClawChat key={conversation.id} conversation_id={conversation.id} workspace={conversation.extra?.workspace} />;
       case 'nanobot':
         return <NanobotChat key={conversation.id} conversation_id={conversation.id} workspace={conversation.extra?.workspace} />;
       default:
@@ -187,7 +184,7 @@ const ChatConversation: React.FC<{
     : isLoadingPreset
       ? {} // Still loading custom agents — avoid showing backend logo prematurely
       : {
-          backend: conversation?.type === 'acp' ? conversation?.extra?.backend : conversation?.type === 'codex' ? 'codex' : conversation?.type === 'openclaw-gateway' ? 'openclaw-gateway' : conversation?.type === 'nanobot' ? 'nanobot' : undefined,
+          backend: conversation?.type === 'acp' ? conversation?.extra?.backend : conversation?.type === 'codex' ? 'codex' : conversation?.type === 'nanobot' ? 'nanobot' : undefined,
           agentName: (conversation?.extra as { agentName?: string })?.agentName,
         };
 

@@ -12,7 +12,7 @@
 ---
 
 <p align="center">
-  <strong>🚀 Gemini CLI、Claude Code、Codex、Qwen Code、Goose CLI, OpenClaw、Auggie などをベースとした「Cowork」個人アシスタント</strong><br>
+  <strong>🚀 Gemini CLI、Claude Code、Codex、Qwen Code、Goose CLI、Auggie などをベースとした「Cowork」個人アシスタント</strong><br>
   <em>無料オープンソースの Claude Cowork 代替案 | マルチエージェントデスクトップ | 自動化タスク実行 | ファイルシステム操作 | クロスプラットフォーム</em>
 </p>
 
@@ -53,11 +53,7 @@
 
 AionUi はコマンドライン AI ツールに統一グラフィカルインターフェースを提供し、**無料オープンソースの Claude Cowork 代替案**として自動化タスク実行とワークフロー機能を備えています。
 
-**サポートツール：** Gemini CLI（内蔵） • Claude Code • Codex • Qwen Code • Goose AI • OpenClaw • Augment Code • iFlow CLI • CodeBuddy • Kimi CLI • OpenCode • Factory Droid • GitHub Copilot • Qoder CLI • Mistral Vibe • Nano Bot など
-
-<p align="center">
-  <img src="./resources/multi-agent支持openclaw.gif" alt="AionUi 中的 OpenClaw 集成" width="800">
-</p>
+**サポートツール：** Gemini CLI（内蔵） • Claude Code • Codex • Qwen Code • Goose AI • Augment Code • iFlow CLI • CodeBuddy • Kimi CLI • OpenCode • Factory Droid • GitHub Copilot • Qoder CLI • Mistral Vibe • Nano Bot など
 
 <details>
 <summary><strong>🔍 コア機能の詳細を表示 ▶️</strong></summary>
@@ -251,7 +247,7 @@ _独自のCSSコードでカスタマイズし、インターフェースを好�
 
 _拡張可能なアシスタントシステム、11の内蔵プロフェッショナルアシスタント、カスタムスキルサポート。**Claude Cowork オープンソース代替案**として、AionUi は自動化ワークフロー実行、ファイルシステム操作、独立したエージェントタスク完了機能を提供します。_
 
-**内蔵アシスタント：** Cowork • PPTX ジェネレーター • PDF to PPT • 3D ゲーム • UI/UX Pro Max • Planning with Files • HUMAN 3.0 コーチ • Social Job Publisher • moltbook • Beautiful Mermaid • OpenClaw セットアップなど
+**内蔵アシスタント：** Cowork • PPTX ジェネレーター • PDF to PPT • 3D ゲーム • UI/UX Pro Max • Planning with Files • HUMAN 3.0 コーチ • Social Job Publisher • Beautiful Mermaid など
 
 <p align="center">
   <img src="./resources/ai-assistants-experts.png" alt="AIアシスタントとスキルエコシステムインターフェース" width="800">
@@ -272,9 +268,7 @@ AionUi には**11のプロフェッショナルアシスタント**が内蔵さ�
 - **📋 Planning with Files** - 複雑なタスクのファイルベース計画（Manusスタイルの永続的なMarkdown計画）
 - **🧭 HUMAN 3.0 コーチ** - 個人開発コーチ
 - **📣 Social Job Publisher** - 求人情報の投稿と公開
-- **🦞 moltbook** - ゼロデプロイメント統合、自動ハートビートスケジューリング、アクティビティレポート、シームレスなAIエージェントソーシャルネットワーキング
 - **📈 Beautiful Mermaid** - フローチャート、シーケンス図など
-- **🔧 OpenClaw セットアップ** - OpenClaw 統合のセットアップと設定アシスタント
 
 **カスタムスキル**：`skills/` ディレクトリでスキルを作成し、アシスタントのスキルを有効化/無効化してAI機能を拡張。内蔵スキルには `pptx`、`docx`、`pdf`、`xlsx`、`mermaid` などが含まれます。
 

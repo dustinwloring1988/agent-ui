@@ -12,7 +12,7 @@
 ---
 
 <p align="center">
-  <strong>🚀 基于 Gemini CLI、Claude Code、Codex、Qwen Code、Goose CLI、OpenClaw、Auggie 等的「Cowork」个人助手</strong><br>
+  <strong>🚀 基于 Gemini CLI、Claude Code、Codex、Qwen Code、Goose CLI、Auggie 等的「Cowork」个人助手</strong><br>
   <em>免费开源的 Claude Cowork 替代方案 | 多 Agent 桌面应用 | 自动化任务执行 | 文件系统操作 | 跨平台</em>
 </p>
 
@@ -53,11 +53,7 @@
 
 AionUi 为你的命令行 AI 工具提供统一图形界面，作为**免费开源的 Claude Cowork 替代方案**，具备自动化任务执行和工作流能力。
 
-**支持的工具：** Gemini CLI（内置） • Claude Code • Codex • Qwen Code • Goose AI • OpenClaw • Augment Code • iFlow CLI • CodeBuddy • Kimi CLI • OpenCode • Factory Droid • GitHub Copilot • Qoder CLI • Mistral Vibe • Nano Bot 等
-
-<p align="center">
-  <img src="./resources/multi-agent支持openclaw.gif" alt="AionUi 中的 OpenClaw 集成" width="800">
-</p>
+**支持的工具：** Gemini CLI（内置） • Claude Code • Codex • Qwen Code • Goose AI • Augment Code • iFlow CLI • CodeBuddy • Kimi CLI • OpenCode • Factory Droid • GitHub Copilot • Qoder CLI • Mistral Vibe • Nano Bot 等
 
 <details>
 <summary><strong>🔍 查看核心特性详情 ▶️</strong></summary>
@@ -168,7 +164,7 @@ _AI Agent 可独立执行任务、运行脚本、读写文件、操作工具，�
 
 - **独立执行** - AI Agent 可独立执行任务、运行脚本、读写文件、操作工具
 - **工作流自动化** - 完整的工作流自动化能力，类似 Claude Cowork，支持文件系统操作和任务自动完成
-- **多代理协作** - 支持多代理协作，可同时运行多个 AI 工具（Gemini CLI、Claude Code、Qwen Code、OpenClaw 等）
+- **多代理协作** - 支持多代理协作，可同时运行多个 AI 工具（Gemini CLI、Claude Code、Qwen Code 等）
 - **统一界面** - 一个界面管理所有命令行 AI 工具，无需切换，提升效率
 
 ---
@@ -252,7 +248,7 @@ AionUi 还支持 [NewAPI](https://github.com/QuantumNous/new-api) 中转服务 -
 
 _可扩展的助手系统，内置 11 个专业助手，支持自定义技能。作为 **Claude Cowork 开源替代方案**，AionUi 提供自动化工作流执行、文件系统操作和独立 Agent 任务完成能力。_
 
-**内置助手：** Cowork • PPTX 生成器 • PDF 转 PPT • 3D 游戏生成 • UI/UX 专业设计师 • 文件规划助手 • HUMAN 3.0 教练 • 社交招聘发布助手 • moltbook • Beautiful Mermaid • OpenClaw 设置助手等
+**内置助手：** Cowork • PPTX 生成器 • PDF 转 PPT • 3D 游戏生成 • UI/UX 专业设计师 • 文件规划助手 • HUMAN 3.0 教练 • 社交招聘发布助手 • Beautiful Mermaid 等
 
 <p align="center">
   <img src="./resources/ai-assistants-experts.png" alt="AI 助手与技能生态界面" width="800">
@@ -273,9 +269,7 @@ AionUi 内置 **11 个专业助手**，每个助手都具备预定义能力，�
 - **📋 文件规划助手** - 复杂任务的文件规划（Manus 风格持久化 Markdown 规划）
 - **🧭 HUMAN 3.0 教练** - 个人发展教练
 - **📣 社交招聘发布助手** - 招聘信息发布
-- **🦞 moltbook** - 免部署集成，支持自动定时触发、活动汇报推送，无缝接入 AI 代理社交网络
 - **📈 Beautiful Mermaid** - 流程图、时序图等图表生成
-- **🔧 OpenClaw 设置助手** - OpenClaw 集成设置和配置助手
 
 **自定义技能**：在 `skills/` 目录创建技能，为助手启用/禁用技能，扩展 AI 能力。内置技能包括 `pptx`、`docx`、`pdf`、`xlsx`、`mermaid` 等。
 
@@ -386,7 +380,7 @@ A: AionUi 支持 20+ 个 AI 平台，包括：
 
 本地模型 - Ollama、LM Studio（通过自定义平台设置本地 API 端点）
 
-还可以同时运行多个 AI Agent（如 Gemini CLI、Claude Code、Qwen Code、OpenClaw 等），详见配置指南。
+还可以同时运行多个 AI Agent（如 Gemini CLI、Claude Code、Qwen Code 等），详见配置指南。
 
 </details>
 

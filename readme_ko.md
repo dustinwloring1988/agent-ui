@@ -12,7 +12,7 @@
 ---
 
 <p align="center">
-  <strong>🚀 Gemini CLI, Claude Code, Codex, Qwen Code, Goose CLI, OpenClaw, Auggie 등을 기반으로 한 「Cowork」개인 어시스턴트</strong><br>
+  <strong>🚀 Gemini CLI, Claude Code, Codex, Qwen Code, Goose CLI, Auggie 등을 기반으로 한 「Cowork」개인 어시스턴트</strong><br>
   <em>무료 오픈소스 Claude Cowork 대안 | 멀티 에이전트 데스크톱 | 자동화 작업 실행 | 파일 시스템 작업 | 크로스 플랫폼</em>
 </p>
 
@@ -53,11 +53,7 @@
 
 AionUi는 명령줄 AI 도구에 통합 그래픽 인터페이스를 제공하며, **무료 오픈소스 Claude Cowork 대안**으로 자동화 작업 실행 및 워크플로우 기능을 갖추고 있습니다.
 
-**지원 도구：** Gemini CLI（내장） • Claude Code • Codex • Qwen Code • Goose AI • OpenClaw • Augment Code • iFlow CLI • CodeBuddy • Kimi CLI • OpenCode • Factory Droid • GitHub Copilot • Qoder CLI • Mistral Vibe • Nano Bot 등
-
-<p align="center">
-  <img src="./resources/multi-agent支持openclaw.gif" alt="AionUi 中的 OpenClaw 集成" width="800">
-</p>
+**지원 도구：** Gemini CLI（내장） • Claude Code • Codex • Qwen Code • Goose AI • Augment Code • iFlow CLI • CodeBuddy • Kimi CLI • OpenCode • Factory Droid • GitHub Copilot • Qoder CLI • Mistral Vibe • Nano Bot 등
 
 <details>
 <summary><strong>🔍 핵심 기능 상세 보기 ▶️</strong></summary>

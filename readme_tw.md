@@ -12,7 +12,7 @@
 ---
 
 <p align="center">
-  <strong>🚀 基於 Gemini CLI、Claude Code、Codex、Qwen Code、Goose CLI, OpenClaw、Auggie 等的「Cowork」個人助手</strong><br>
+  <strong>🚀 基於 Gemini CLI、Claude Code、Codex、Qwen Code、Goose CLI、Auggie 等的「Cowork」個人助手</strong><br>
   <em>免費開源的 Claude Cowork 替代方案 | 多 Agent 桌面應用 | 自動化任務執行 | 檔案系統操作 | 跨平台</em>
 </p>
 
@@ -53,11 +53,7 @@
 
 AionUi 為您的命令列 AI 工具提供統一圖形介面，作為**免費開源的 Claude Cowork 替代方案**，具備自動化任務執行和工作流能力。
 
-**支援的工具：** Gemini CLI（內建） • Claude Code • Codex • Qwen Code • Goose AI • OpenClaw • Augment Code • iFlow CLI • CodeBuddy • Kimi CLI • OpenCode • Factory Droid • GitHub Copilot • Qoder CLI • Mistral Vibe • Nano Bot 等
-
-<p align="center">
-  <img src="./resources/multi-agent支持openclaw.gif" alt="AionUi 中的 OpenClaw 集成" width="800">
-</p>
+**支援的工具：** Gemini CLI（內建） • Claude Code • Codex • Qwen Code • Goose AI • Augment Code • iFlow CLI • CodeBuddy • Kimi CLI • OpenCode • Factory Droid • GitHub Copilot • Qoder CLI • Mistral Vibe • Nano Bot 等
 
 <details>
 <summary><strong>🔍 查看核心特性詳情 ▶️</strong></summary>
@@ -336,7 +332,7 @@ A: AionUi 支援 20+ 個 AI 平台，包括：
 
 本地模型 - Ollama、LM Studio（透過自訂平台設定本地 API 端點）
 
-還可以同時執行多個 AI Agent（如 Gemini CLI、Claude Code、Qwen Code、OpenClaw 等），詳見設定指南。
+還可以同時執行多個 AI Agent（如 Gemini CLI、Claude Code、Qwen Code 等），詳見設定指南。
 
 </details>
 

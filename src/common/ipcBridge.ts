@@ -213,38 +213,6 @@ export const codexConversation = {
   responseStream: conversation.responseStream,
 };
 
-// OpenClaw 对话相关接口 - 复用统一的conversation接口
-export const openclawConversation = {
-  sendMessage: conversation.sendMessage,
-  responseStream: bridge.buildEmitter<IResponseMessage>('openclaw.response.stream'),
-  getRuntime: bridge.buildProvider<
-    IBridgeResponse<{
-      conversationId: string;
-      runtime: {
-        workspace?: string;
-        backend?: string;
-        agentName?: string;
-        cliPath?: string;
-        model?: string;
-        sessionKey?: string | null;
-        isConnected?: boolean;
-        hasActiveSession?: boolean;
-        identityHash?: string | null;
-      };
-      expected?: {
-        expectedWorkspace?: string;
-        expectedBackend?: string;
-        expectedAgentName?: string;
-        expectedCliPath?: string;
-        expectedModel?: string;
-        expectedIdentityHash?: string | null;
-        switchedAt?: number;
-      };
-    }>,
-    { conversation_id: string }
-  >('openclaw.get-runtime'),
-};
-
 // Database operations
 export const database = {
   getConversationMessages: bridge.buildProvider<import('@/common/chatLib').TMessage[], { conversation_id: string; page?: number; pageSize?: number }>('database.get-conversation-messages'),
@@ -389,7 +357,7 @@ export interface IConfirmMessageParams {
 }
 
 export interface ICreateConversationParams {
-  type: 'gemini' | 'acp' | 'codex' | 'openclaw-gateway' | 'nanobot';
+  type: 'gemini' | 'acp' | 'codex' | 'nanobot';
   id?: string;
   name?: string;
   model: TProviderWithModel;
@@ -419,7 +387,7 @@ export interface ICreateConversationParams {
     presetAssistantId?: string;
     /** Initial session mode selected on Guid page (from AgentModeSelector) */
     sessionMode?: string;
-    /** Runtime validation snapshot used for post-switch strong checks (OpenClaw) */
+    /** Runtime validation snapshot used for post-switch strong checks */
     runtimeValidation?: {
       expectedWorkspace?: string;
       expectedBackend?: string;

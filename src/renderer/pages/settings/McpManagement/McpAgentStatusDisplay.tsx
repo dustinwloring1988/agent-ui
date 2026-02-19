@@ -8,7 +8,6 @@ import GooseLogo from '@/renderer/assets/logos/goose.svg';
 import IflowLogo from '@/renderer/assets/logos/iflow.svg';
 import KimiLogo from '@/renderer/assets/logos/kimi.svg';
 import NanobotLogo from '@/renderer/assets/logos/nanobot.svg';
-import OpenClawLogo from '@/renderer/assets/logos/openclaw.svg';
 import OpenCodeLogo from '@/renderer/assets/logos/opencode.svg';
 import QwenLogo from '@/renderer/assets/logos/qwen.svg';
 import { iconColors } from '@/renderer/theme/colors';
@@ -35,9 +34,7 @@ const AGENT_LOGO_MAP: Record<string, string> = {
   kimi: KimiLogo,
   opencode: OpenCodeLogo,
   copilot: GitHubLogo,
-  openclaw: OpenClawLogo,
   vibe: MistralLogo,
-  'openclaw-gateway': OpenClawLogo,
   nanobot: NanobotLogo,
 };
 

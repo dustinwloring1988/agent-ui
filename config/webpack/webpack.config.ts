@@ -19,7 +19,6 @@ export const mainConfig: Configuration = {
     gemini: './src/worker/gemini.ts',
     acp: './src/worker/acp.ts',
     codex: './src/worker/codex.ts',
-    'openclaw-gateway': './src/worker/openclaw-gateway.ts',
     nanobot: './src/worker/nanobot.ts',
   },
   output: {

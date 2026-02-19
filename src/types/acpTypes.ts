@@ -52,7 +52,6 @@ export type AcpBackendAll =
   | 'opencode' // OpenCode CLI
   | 'copilot' // GitHub Copilot CLI
   | 'qoder' // Qoder CLI
-  | 'openclaw-gateway' // OpenClaw Gateway WebSocket
   | 'vibe' // Mistral Vibe CLI
   | 'nanobot' // nanobot CLI
   | 'custom'; // User-configured custom ACP agent
@@ -408,15 +407,6 @@ export const ACP_BACKENDS_ALL: Record<AcpBackendAll, AcpBackendConfig> = {
     enabled: true, // ✅ Mistral Vibe CLI，使用 `vibe-acp` 启动
     supportsStreaming: false,
     acpArgs: [],
-  },
-  'openclaw-gateway': {
-    id: 'openclaw-gateway',
-    name: 'OpenClaw',
-    cliCommand: 'openclaw',
-    authRequired: false,
-    enabled: true, // ✅ OpenClaw Gateway WebSocket mode
-    supportsStreaming: true,
-    acpArgs: ['gateway'], // openclaw gateway command (for detection)
   },
   nanobot: {
     id: 'nanobot',

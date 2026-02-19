@@ -163,27 +163,18 @@ export const handleSessionNew: ActionHandler = async (context) => {
             name,
             channelChatId,
           })
-        : backend === 'openclaw-gateway'
-          ? await ConversationService.createConversation({
-              type: 'openclaw-gateway',
-              model,
-              source,
-              name,
-              channelChatId,
-              extra: {},
-            })
-          : await ConversationService.createConversation({
-              type: 'acp',
-              model,
-              source,
-              name,
-              channelChatId,
-              extra: {
-                backend: backend as AcpBackend,
-                customAgentId,
-                agentName,
-              },
-            });
+        : await ConversationService.createConversation({
+            type: 'acp',
+            model,
+            source,
+            name,
+            channelChatId,
+            extra: {
+              backend: backend as AcpBackend,
+              customAgentId,
+              agentName,
+            },
+          });
 
   if (!result.success || !result.conversation) {
     return createErrorResponse(`Failed to create session: ${result.error || 'Unknown error'}`);
@@ -506,7 +497,6 @@ function getAgentDisplayName(agentType: ChannelAgentType): string {
     gemini: '🤖 Gemini',
     acp: '🧠 Claude',
     codex: '⚡ Codex',
-    'openclaw-gateway': '🦞 OpenClaw',
   };
   return names[agentType] || agentType;
 }
@@ -520,7 +510,6 @@ function backendToChannelAgentType(backend: string): ChannelAgentType | null {
     gemini: 'gemini',
     claude: 'acp',
     codex: 'codex',
-    'openclaw-gateway': 'openclaw-gateway',
   };
   return mapping[backend] || null;
 }
@@ -533,7 +522,6 @@ function getAgentEmoji(backend: string): string {
     gemini: '🤖',
     claude: '🧠',
     codex: '⚡',
-    'openclaw-gateway': '🦞',
   };
   return emojis[backend] || '🤖';
 }

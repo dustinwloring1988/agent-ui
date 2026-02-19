@@ -207,43 +207,6 @@ export type TChatConversation =
     >
   | Omit<
       IChatConversation<
-        'openclaw-gateway',
-        {
-          workspace?: string;
-          backend?: AcpBackendAll;
-          agentName?: string;
-          customWorkspace?: boolean;
-          /** Gateway configuration */
-          gateway?: {
-            host?: string;
-            port?: number;
-            token?: string;
-            password?: string;
-            useExternalGateway?: boolean;
-            cliPath?: string;
-          };
-          /** Session key for resume */
-          sessionKey?: string;
-          /** Runtime validation snapshot used for post-switch strong checks */
-          runtimeValidation?: {
-            expectedWorkspace?: string;
-            expectedBackend?: string;
-            expectedAgentName?: string;
-            expectedCliPath?: string;
-            expectedModel?: string;
-            expectedIdentityHash?: string | null;
-            switchedAt?: number;
-          };
-          /** 启用的 skills 列表 / Enabled skills list */
-          enabledSkills?: string[];
-          /** 预设助手 ID / Preset assistant ID */
-          presetAssistantId?: string;
-        }
-      >,
-      'model'
-    >
-  | Omit<
-      IChatConversation<
         'nanobot',
         {
           workspace?: string;

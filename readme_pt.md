@@ -12,7 +12,7 @@
 ---
 
 <p align="center">
-  <strong>🚀 Assistente pessoal 「Cowork」baseado em Gemini CLI, Claude Code, Codex, Qwen Code, Goose CLI, OpenClaw, Auggie e mais</strong><br>
+  <strong>🚀 Assistente pessoal 「Cowork」baseado em Gemini CLI, Claude Code, Codex, Qwen Code, Goose CLI, Auggie e mais</strong><br>
   <em>Alternativa gratuita e de código aberto ao Claude Cowork | Desktop multiagente | Execução automatizada de tarefas | Operações do sistema de arquivos | Multiplataforma</em>
 </p>
 
@@ -53,13 +53,9 @@
 
 AionUi fornece uma interface gráfica unificada para suas ferramentas de IA em linha de comando, servindo como uma **alternativa gratuita e de código aberto ao Claude Cowork** com capacidades de execução automatizada de tarefas e fluxos de trabalho. Gemini CLI integrado incluído, sem configuração necessária.
 
-**Ferramentas compatíveis：** Gemini CLI (integrado) • Claude Code • Codex • Qwen Code • Goose AI • OpenClaw • Augment Code • iFlow CLI • CodeBuddy • Kimi CLI • OpenCode • Factory Droid • GitHub Copilot • Qoder CLI • Mistral Vibe • Nano Bot e mais
+**Ferramentas compatíveis：** Gemini CLI (integrado) • Claude Code • Codex • Qwen Code • Goose AI • Augment Code • iFlow CLI • CodeBuddy • Kimi CLI • OpenCode • Factory Droid • GitHub Copilot • Qoder CLI • Mistral Vibe • Nano Bot e mais
 
 > 💡 **Procurando uma alternativa de código aberto ao Claude Cowork?** AionUi é a melhor alternativa gratuita com suporte multiagente, fluxos de trabalho automatizados e compatibilidade multiplataforma.
-
-<p align="center">
-  <img src="./resources/multi-agent支持openclaw.gif" alt="AionUi 中的 OpenClaw 集成" width="800">
-</p>
 
 **Recursos principais：**
 
@@ -177,7 +173,7 @@ _Admite modelos principais como Gemini, OpenAI, Claude, Qwen, e modelos locais c
 
 _Sistema de assistentes extensível com 11 assistentes profissionais integrados e suporte para skills personalizados. Como **alternativa de código aberto ao Claude Cowork**, o AionUi fornece execução automatizada de fluxos de trabalho, operações do sistema de arquivos e capacidades de conclusão de tarefas de agentes independentes._
 
-**Assistentes integrados:** Cowork • Gerador PPTX • PDF para PPT • Jogo 3D • UI/UX Pro Max • Planning with Files • HUMAN 3.0 Coach • Social Job Publisher • moltbook • Beautiful Mermaid • OpenClaw Setup e mais
+**Assistentes integrados:** Cowork • Gerador PPTX • PDF para PPT • Jogo 3D • UI/UX Pro Max • Planning with Files • HUMAN 3.0 Coach • Social Job Publisher • Beautiful Mermaid e mais
 
 <p align="center">
   <img src="./resources/ai-assistants-experts.png" alt="AI Assistants & Skills Ecosystem Interface" width="800">
@@ -198,9 +194,7 @@ O AionUi inclui **11 assistentes profissionais** com capacidades predefinidas, e
 - **📋 Planning with Files** - Planejamento baseado em arquivos para tarefas complexas (planejamento persistente estilo Manus em Markdown)
 - **🧭 HUMAN 3.0 Coach** - Coach de desenvolvimento pessoal
 - **📣 Social Job Publisher** - Publicação e divulgação de ofertas de emprego
-- **🦞 moltbook** - Integração sem implantação com agendamento de heartbeat, relatórios de atividade e redes sociais de agentes IA
 - **📈 Beautiful Mermaid** - Diagramas de fluxo, sequência e mais
-- **🔧 OpenClaw Setup** - Assistente de configuração e integração do OpenClaw
 
 **Skills personalizados:** Crie skills no diretório `skills/`, ative/desative skills para que os assistentes estendam as capacidades de IA. Skills integrados incluem `pptx`, `docx`, `pdf`, `xlsx`, `mermaid`, e mais.
 

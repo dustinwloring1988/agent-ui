@@ -12,7 +12,7 @@
 ---
 
 <p align="center">
-  <strong>🚀 Yapay Zekanızla Birlikte Çalışın: Gemini CLI, Claude Code, Codex, Qwen Code, Goose CLI, OpenClaw, Auggie ve daha fazlası</strong><br>
+  <strong>🚀 Yapay Zekanızla Birlikte Çalışın: Gemini CLI, Claude Code, Codex, Qwen Code, Goose CLI, Auggie ve daha fazlası</strong><br>
   <em>Ücretsiz ve Açık Kaynak Claude Cowork Alternatifi | Çoklu Ajan Masaüstü | Otomatik Görev Yürütme | Dosya Sistemi İşlemleri | Çapraz Platform</em>
 </p>
 
@@ -53,13 +53,9 @@
 
 AionUi, komut satırı yapay zeka araçlarınız için birleşik bir grafik arayüz sağlar ve otomatik görev yürütme ve iş akışı yetenekleriyle **ücretsiz ve açık kaynak Claude Cowork alternatifi** olarak hizmet eder. Dahili Gemini CLI dahil, kurulum gerekmez.
 
-**Desteklenen araçlar：** Gemini CLI (dahili) • Claude Code • Codex • Qwen Code • Goose AI • OpenClaw • Augment Code • iFlow CLI • CodeBuddy • Kimi CLI • OpenCode • Factory Droid • GitHub Copilot • Qoder CLI • Mistral Vibe • Nano Bot ve daha fazlası
+**Desteklenen araçlar：** Gemini CLI (dahili) • Claude Code • Codex • Qwen Code • Goose AI • Augment Code • iFlow CLI • CodeBuddy • Kimi CLI • OpenCode • Factory Droid • GitHub Copilot • Qoder CLI • Mistral Vibe • Nano Bot ve daha fazlası
 
 > 💡 **Claude Cowork açık kaynak alternatifi mi arıyorsunuz?** AionUi, çoklu ajan desteği, otomatik iş akışları ve çapraz platform uyumluluğu ile en iyi ücretsiz alternatiftir.
-
-<p align="center">
-  <img src="./resources/multi-agent支持openclaw.gif" alt="AionUi 中的 OpenClaw 集成" width="800">
-</p>
 
 **Temel özellikler：**
 
@@ -154,7 +150,7 @@ _Gemini, OpenAI, Claude, Qwen gibi ana akım modelleri ve Ollama, LM Studio gibi
 
 _Genişletilebilir asistan sistemi, 11 yerleşik profesyonel asistan ve özel skill desteği. **Claude Cowork açık kaynak alternatifi** olarak AionUi, otomatik iş akışı yürütme, dosya sistemi işlemleri ve bağımsız Agent görev tamamlama yetenekleri sağlar._
 
-**Yerleşik asistanlar:** Cowork • PPTX Oluşturucu • PDF'den PPT'ye • 3D Oyun • UI/UX Pro Max • Planning with Files • HUMAN 3.0 Coach • Social Job Publisher • moltbook • Beautiful Mermaid • OpenClaw Setup ve daha fazlası
+**Yerleşik asistanlar:** Cowork • PPTX Oluşturucu • PDF'den PPT'ye • 3D Oyun • UI/UX Pro Max • Planning with Files • HUMAN 3.0 Coach • Social Job Publisher • Beautiful Mermaid ve daha fazlası
 
 <p align="center">
   <img src="./resources/ai-assistants-experts.png" alt="AI Assistants & Skills Ecosystem Interface" width="800">
@@ -175,9 +171,7 @@ AionUi **11 profesyonel asistan** içerir, her biri önceden tanımlanmış yete
 - **📋 Planning with Files** - Karmaşık görevler için dosya tabanlı planlama (Manus tarzı kalıcı Markdown planlama)
 - **🧭 HUMAN 3.0 Coach** - Kişisel gelişim koçu
 - **📣 Social Job Publisher** - İş ilanı yayınlama
-- **🦞 moltbook** - Dağıtım gerektirmeyen entegrasyon, otomatik zamanlanmış tetikleme, aktivite raporlama gönderimi, sorunsuz AI ajan sosyal ağ entegrasyonu
 - **📈 Beautiful Mermaid** - Akış şemaları, sıralı diyagramlar ve daha fazlası
-- **🔧 OpenClaw Setup** - OpenClaw entegrasyonu kurulum ve yapılandırma asistanı
 
 **Özel skill'ler:** `skills/` dizininde skill oluşturun, asistanlar için skill'leri etkinleştirin/devre dışı bırakın, AI yeteneklerini genişletin. Yerleşik skill'ler `pptx`, `docx`, `pdf`, `xlsx`, `mermaid` ve daha fazlasını içerir.
 

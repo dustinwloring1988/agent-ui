@@ -24,29 +24,6 @@ export type AssistantPreset = {
 
 export const ASSISTANT_PRESETS: AssistantPreset[] = [
   {
-    id: 'openclaw-setup',
-    avatar: '🦞',
-    presetAgentType: 'gemini',
-    resourceDir: 'assistant/openclaw-setup',
-    ruleFiles: {
-      'en-US': 'openclaw-setup.md',
-      'zh-CN': 'openclaw-setup.zh-CN.md',
-    },
-    defaultEnabledSkills: ['openclaw-setup', 'aionui-webui-setup'],
-    nameI18n: {
-      'en-US': 'OpenClaw Setup Expert',
-      'zh-CN': 'OpenClaw 部署专家',
-    },
-    descriptionI18n: {
-      'en-US': 'Expert guide for installing, deploying, configuring, and troubleshooting OpenClaw. Proactively helps with setup, diagnoses issues, and provides security best practices.',
-      'zh-CN': 'OpenClaw 安装、部署、配置和故障排查专家。主动协助设置、诊断问题并提供安全最佳实践。',
-    },
-    promptsI18n: {
-      'en-US': ['Help me install OpenClaw step by step', "My OpenClaw isn't working, please diagnose the issue", 'Configure Telegram channel for OpenClaw integration'],
-      'zh-CN': ['帮我一步步安装 OpenClaw', '我的 OpenClaw 出问题了，请帮我诊断', '为 OpenClaw 配置 Telegram 渠道'],
-    },
-  },
-  {
     id: 'cowork',
     avatar: 'cowork.svg',
     presetAgentType: 'gemini',
@@ -230,33 +207,6 @@ export const ASSISTANT_PRESETS: AssistantPreset[] = [
     promptsI18n: {
       'en-US': ['Create a comprehensive job post for Senior Full-Stack Engineer', 'Draft an engaging hiring tweet for social media', 'Create a multi-platform job posting (LinkedIn, X, Redbook)'],
       'zh-CN': ['创建一份高级全栈工程师的完整招聘启事', '起草一条适合社交媒体的招聘推文', '创建多平台职位发布（LinkedIn、X、小红书）'],
-    },
-  },
-  {
-    id: 'moltbook',
-    avatar: '🦞',
-    presetAgentType: 'gemini',
-    resourceDir: 'assistant/moltbook',
-    ruleFiles: {
-      'en-US': 'moltbook.md',
-      'zh-CN': 'moltbook.md',
-    },
-    skillFiles: {
-      'en-US': 'moltbook-skills.md',
-      'zh-CN': 'moltbook-skills.zh-CN.md',
-    },
-    defaultEnabledSkills: ['moltbook'],
-    nameI18n: {
-      'en-US': 'moltbook',
-      'zh-CN': 'moltbook',
-    },
-    descriptionI18n: {
-      'en-US': 'The social network for AI agents. Post, comment, upvote, and create communities.',
-      'zh-CN': 'AI 代理的社交网络。发帖、评论、投票、创建社区。',
-    },
-    promptsI18n: {
-      'en-US': ['Check my moltbook feed for latest updates', 'Post an interesting update to moltbook', 'Check for new direct messages'],
-      'zh-CN': ['查看我的 moltbook 最新动态', '在 moltbook 发布一条有趣的动态', '检查是否有新私信'],
     },
   },
   {

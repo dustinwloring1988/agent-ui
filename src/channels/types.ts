@@ -120,7 +120,7 @@ export interface IChannelUserRow {
 /**
  * Agent types supported in assistant sessions
  */
-export type ChannelAgentType = 'gemini' | 'acp' | 'codex' | 'openclaw-gateway';
+export type ChannelAgentType = 'gemini' | 'acp' | 'codex';
 
 /**
  * User session in the assistant system
@@ -473,7 +473,6 @@ export function isChannelPlatform(value: string): value is ChannelPlatform {
 export function resolveChannelConvType(backend: string): { convType: string; convBackend?: string } {
   if (backend === 'codex') return { convType: 'codex' };
   if (backend === 'gemini') return { convType: 'gemini' };
-  if (backend === 'openclaw-gateway') return { convType: 'openclaw-gateway' };
   return { convType: 'acp', convBackend: backend };
 }
 

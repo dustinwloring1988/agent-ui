@@ -8,7 +8,6 @@ import type { TChatConversation } from '@/common/storage';
 import AcpAgentManager from './task/AcpAgentManager';
 import { CodexAgentManager } from '@/agent/codex';
 import NanoBotAgentManager from './task/NanoBotAgentManager';
-import OpenClawAgentManager from './task/OpenClawAgentManager';
 // import type { AcpAgentTask } from './task/AcpAgentTask';
 import { ProcessChat } from './initStorage';
 import type AgentBaseTask from './task/BaseAgentManager';
@@ -90,18 +89,6 @@ const buildConversation = (conversation: TChatConversation, options?: BuildConve
         yoloMode: options?.yoloMode,
         // Persisted session mode for resume / 持久化的会话模式用于恢复
         sessionMode: conversation.extra.sessionMode,
-      });
-      if (!options?.skipCache) {
-        taskList.push({ id: conversation.id, task });
-      }
-      return task;
-    }
-    case 'openclaw-gateway': {
-      const task = new OpenClawAgentManager({
-        ...conversation.extra,
-        conversation_id: conversation.id,
-        // Runtime options / 运行时选项
-        yoloMode: options?.yoloMode,
       });
       if (!options?.skipCache) {
         taskList.push({ id: conversation.id, task });

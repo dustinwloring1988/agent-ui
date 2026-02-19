@@ -1,4 +1,7 @@
 {
+  "app": {
+    "name": "AgentUI"
+  },
   "agentMode": {
     "plan": "Plan Mode",
     "default": "Default",
