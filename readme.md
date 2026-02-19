@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/github/v/release/iOfficeAI/AionUi?style=flat-square&color=32CD32" alt="Version">
+  <img src="https://img.shields.io/github/v/release/dustinwloring1988/agent-ui?style=flat-square&color=32CD32" alt="Version">
   &nbsp;
   <img src="https://img.shields.io/badge/license-Apache--2.0-32CD32?style=flat-square&logo=apache&logoColor=white" alt="License">
   &nbsp;
@@ -17,17 +17,17 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/iOfficeAI/AionUi/releases">
+  <a href="https://github.com/dustinwloring1988/agent-ui/releases">
     <img src="https://img.shields.io/badge/⬇️%20Download%20Now-Latest%20Release-32CD32?style=for-the-badge&logo=github&logoColor=white" alt="Download Latest Release" height="50">
   </a>
 </p>
 
 <p align="center">
-  <strong>English</strong> | <a href="./readme_ch.md">简体中文</a> | <a href="./readme_tw.md">繁體中文</a> | <a href="./readme_jp.md">日本語</a> | <a href="./readme_ko.md">한국어</a> | <a href="./readme_es.md">Español</a> | <a href="./readme_pt.md">Português</a> | <a href="./readme_tr.md">Türkçe</a> | <a href="https://www.aionui.com" target="_blank">Official Website</a>
+  <strong>English</strong> | <a href="./readme_ch.md">简体中文</a> | <a href="./readme_tw.md">繁體中文</a> | <a href="./readme_jp.md">日本語</a> | <a href="./readme_ko.md">한국어</a> | <a href="./readme_es.md">Español</a> | <a href="./readme_pt.md">Português</a> | <a href="./readme_tr.md">Türkçe</a> | <a href="https://github.com/dustinwloring1988/agent-ui" target="_blank">Official Website</a>
 </p>
 
 <p align="center">
-  <strong>Community:</strong> <a href="https://discord.gg/2QAwJn7Egx" target="_blank">Discord (English)</a> | <a href="./resources/wechat_group.png" target="_blank">微信 (中文群)</a> | <a href="https://twitter.com/AionUI" target="_blank">Twitter</a>
+  <strong>Community:</strong> <a href="https://discord.gg/bJSdUDb8" target="_blank">Discord (English)</a> | <a href="https://twitter.com/AgentUi" target="_blank">Twitter</a>
 </p>
 
 ---
@@ -56,7 +56,7 @@
 ### Install
 
 <p>
-  <a href="https://github.com/iOfficeAI/AionUi/releases">
+  <a href="https://github.com/dustinwloring1988/agent-ui/releases">
     <img src="https://img.shields.io/badge/Download-Latest%20Release-32CD32?style=for-the-badge&logo=github&logoColor=white" alt="Download Latest Release" height="50">
   </a>
 </p>
@@ -81,23 +81,23 @@ brew install aionui
 
 **Quick Start**
 
-- [Complete Installation Guide](https://github.com/iOfficeAI/AionUi/wiki/Getting-Started) — Detailed steps from download to configuration
-- [LLM Configuration Guide](https://github.com/iOfficeAI/AionUi/wiki/LLM-Configuration) — Multi-platform AI model configuration
-- [Multi-Agent Mode Setup](https://github.com/iOfficeAI/AionUi/wiki/ACP-Setup) — Integrate terminal AI agents
-- [MCP Tool Configuration](https://github.com/iOfficeAI/AionUi/wiki/MCP-Configuration-Guide) — Model Context Protocol server setup
-- [WebUI Configuration Guide](https://github.com/iOfficeAI/AionUi/wiki/WebUI-Configuration-Guide) — Complete WebUI setup and configuration tutorial
+- [Complete Installation Guide](https://github.com/dustinwloring1988/agent-ui/wiki/Getting-Started) — Detailed steps from download to configuration
+- [LLM Configuration Guide](https://github.com/dustinwloring1988/agent-ui/wiki/LLM-Configuration) — Multi-platform AI model configuration
+- [Multi-Agent Mode Setup](https://github.com/dustinwloring1988/agent-ui/wiki/ACP-Setup) — Integrate terminal AI agents
+- [MCP Tool Configuration](https://github.com/dustinwloring1988/agent-ui/wiki/MCP-Configuration-Guide) — Model Context Protocol server setup
+- [WebUI Configuration Guide](https://github.com/dustinwloring1988/agent-ui/wiki/WebUI-Configuration-Guide) — Complete WebUI setup and configuration tutorial
 
 **Use Cases**
 
-- [File Management](https://github.com/iOfficeAI/AionUi/wiki/file-management) — Smart file organization
-- [Excel Processing](https://github.com/iOfficeAI/AionUi/wiki/excel-processing) — AI-driven data processing
-- [Image Generation](https://github.com/iOfficeAI/AionUi/wiki/AionUi-Image-Generation-Tool-Model-Configuration-Guide) — AI image creation
-- [More Use Cases](https://github.com/iOfficeAI/AionUi/wiki/Use-Cases-Overview)
+- [File Management](https://github.com/dustinwloring1988/agent-ui/wiki/file-management) — Smart file organization
+- [Excel Processing](https://github.com/dustinwloring1988/agent-ui/wiki/excel-processing) — AI-driven data processing
+- [Image Generation](https://github.com/dustinwloring1988/agent-ui/wiki/AionUi-Image-Generation-Tool-Model-Configuration-Guide) — AI image creation
+- [More Use Cases](https://github.com/dustinwloring1988/agent-ui/wiki/Use-Cases-Overview)
 
 **Support & Help**
 
-- [FAQ](https://github.com/iOfficeAI/AionUi/wiki/FAQ) — Questions and troubleshooting
-- [Configuration & Usage Tutorials](https://github.com/iOfficeAI/AionUi/wiki/Configuration-Guides) — Complete configuration documentation
+- [FAQ](https://github.com/dustinwloring1988/agent-ui/wiki/FAQ) — Questions and troubleshooting
+- [Configuration & Usage Tutorials](https://github.com/dustinwloring1988/agent-ui/wiki/Configuration-Guides) — Complete configuration documentation
 
 </details>
 
@@ -124,16 +124,16 @@ This project is licensed under [Apache-2.0](LICENSE).
 ## Contributors
 
 <p align="center">
-  <a href="https://github.com/iOfficeAI/AionUi/graphs/contributors">
-    <img src="https://contrib.rocks/image?repo=iOfficeAI/AionUi&max=50" alt="Contributors" />
+  <a href="https://github.com/dustinwloring1988/agent-ui/graphs/contributors">
+    <img src="https://contrib.rocks/image?repo=dustinwloring1988/agent-ui&max=50" alt="Contributors" />
   </a>
 </p>
 
 ## Star History
 
 <p align="center">
-  <a href="https://www.star-history.com/#iOfficeAI/aionui&Date" target="_blank">
-    <img src="https://api.star-history.com/svg?repos=iOfficeAI/aionui&type=Date" alt="Star History" width="600">
+  <a href="https://www.star-history.com/#dustinwloring1988/agent-ui&Date" target="_blank">
+    <img src="https://api.star-history.com/svg?repos=dustinwloring1988/agent-ui&type=Date" alt="Star History" width="600">
   </a>
 </p>
 
@@ -141,6 +141,6 @@ This project is licensed under [Apache-2.0](LICENSE).
 
 **If you like it, give us a star**
 
-[Report Bug](https://github.com/iOfficeAI/AionUi/issues) · [Request Feature](https://github.com/iOfficeAI/AionUi/issues)
+[Report Bug](https://github.com/dustinwloring1988/agent-ui/issues) · [Request Feature](https://github.com/dustinwloring1988/agent-ui/issues)
 
 </div>

@@ -20,31 +20,31 @@ Use this skill whenever the user wants to:
 
 ## How to use this skill
 
-This skill is organized to match the Electron official documentation structure (https://www.electronjs.org/zh/docs/latest/, https://www.electronjs.org/zh/docs/latest/api/app). When working with Electron:
+This skill is organized to match the Electron official documentation structure (https://www.electronjs.org/docs/latest/, https://www.electronjs.org/docs/latest/api/app). When working with Electron:
 
 1. **Identify the topic** from the user's request:
-   - Getting started/快速开始 → `examples/getting-started/installation.md` or `examples/getting-started/quick-start.md`
-   - Main process/主进程 → `examples/processes/main-process.md`
-   - Renderer process/渲染进程 → `examples/processes/renderer-process.md`
-   - IPC communication/IPC 通信 → `examples/processes/ipc-communication.md`
-   - BrowserWindow/窗口 → `examples/api/browser-window.md`
-   - Menu/菜单 → `examples/api/menu.md`
-   - Packaging/打包 → `examples/advanced/packaging.md`
-   - Security/安全 → `examples/advanced/security.md`
+   - Getting started/Quick Start → `examples/getting-started/installation.md` or `examples/getting-started/quick-start.md`
+   - Main process → `examples/processes/main-process.md`
+   - Renderer process → `examples/processes/renderer-process.md`
+   - IPC communication → `examples/processes/ipc-communication.md`
+   - BrowserWindow/Window → `examples/api/browser-window.md`
+   - Menu → `examples/api/menu.md`
+   - Packaging → `examples/advanced/packaging.md`
+   - Security → `examples/advanced/security.md`
 
 2. **Load the appropriate example file** from the `examples/` directory:
 
-   **Getting Started (快速开始) - `examples/getting-started/`**:
+   **Getting Started - `examples/getting-started/`**:
    - `examples/getting-started/installation.md` - Installing Electron and basic setup
    - `examples/getting-started/quick-start.md` - Quick start tutorial
 
-   **Processes (进程) - `examples/processes/`**:
+   **Processes - `examples/processes/`**:
    - `examples/processes/main-process.md` - Main process concepts and usage
    - `examples/processes/renderer-process.md` - Renderer process concepts
    - `examples/processes/preload-scripts.md` - Preload scripts usage
    - `examples/processes/ipc-communication.md` - IPC communication patterns
 
-   **API Examples (API 示例) - `examples/api/`**:
+   **API Examples - `examples/api/`**:
    - `examples/api/browser-window.md` - BrowserWindow usage
    - `examples/api/menu.md` - Menu and context menu
    - `examples/api/tray.md` - System tray
@@ -52,13 +52,13 @@ This skill is organized to match the Electron official documentation structure (
    - `examples/api/ipc-main.md` - ipcMain usage
    - `examples/api/ipc-renderer.md` - ipcRenderer usage
 
-   **Advanced (高级) - `examples/advanced/`**:
+   **Advanced - `examples/advanced/`**:
    - `examples/advanced/packaging.md` - Application packaging
    - `examples/advanced/security.md` - Security best practices
    - `examples/advanced/auto-updater.md` - Auto updater
    - `examples/advanced/native-modules.md` - Native modules
 
-   **Tools (工具) - `examples/tools/`**:
+   **Tools - `examples/tools/`**:
    - `examples/tools/electron-forge.md` - Electron Forge usage
    - `examples/tools/electron-fiddle.md` - Electron Fiddle usage
 
@@ -88,8 +88,8 @@ This skill is organized to match the Electron official documentation structure (
 
 ### Doc mapping (one-to-one with official documentation)
 
-- `examples/` → https://www.electronjs.org/zh/docs/latest/
-- `api/` → https://www.electronjs.org/zh/docs/latest/api/app
+- `examples/` → https://www.electronjs.org/docs/latest/
+- `api/` → https://www.electronjs.org/docs/latest/api/app
 
 ## Examples and Templates
 
@@ -140,13 +140,13 @@ Detailed API documentation is available in the `api/` directory, organized to ma
 
 ## Resources
 
-- **Official Website**: https://www.electronjs.org/zh/
-- **Documentation**: https://www.electronjs.org/zh/docs/latest/
-- **API Reference**: https://www.electronjs.org/zh/docs/latest/api/app
+- **Official Website**: https://www.electronjs.org/
+- **Documentation**: https://www.electronjs.org/docs/latest/
+- **API Reference**: https://www.electronjs.org/docs/latest/api/app
 - **Electron Forge**: https://www.electronforge.io
-- **Electron Fiddle**: https://www.electronjs.org/zh/fiddle
+- **Electron Fiddle**: https://www.electronjs.org/fiddle
 - **GitHub Repository**: https://github.com/electron/electron
 
 ## Keywords
 
-Electron, desktop app, main process, renderer process, preload, IPC, BrowserWindow, Menu, Tray, Dialog, packaging, electron-builder, electron-forge, electron-fiddle, cross-platform, 桌面应用, 主进程, 渲染进程, IPC 通信, 窗口, 菜单, 托盘, 打包
+Electron, desktop app, main process, renderer process, preload, IPC, BrowserWindow, Menu, Tray, Dialog, packaging, electron-builder, electron-forge, electron-fiddle, cross-platform
