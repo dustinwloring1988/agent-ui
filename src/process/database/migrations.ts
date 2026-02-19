@@ -610,13 +610,53 @@ const migration_v13: IMigration = {
       CREATE INDEX IF NOT EXISTS idx_assistant_plugins_enabled ON assistant_plugins(enabled);
     `);
 
-    // Rollback conversations: remove 'dingtalk' from source
     db.exec(`
       UPDATE conversations SET source = NULL WHERE source = 'dingtalk';
     `);
 
+    console.log('[Migration v13] Rolled back: Removed dingtalk from assistant_plugins type constraint');
+  },
+};
+
+/**
+ * Migration v13 -> v14: Remove lark and dingtalk from CHECK constraints
+ * 移除 lark 和 dingtalk 类型，只保留 aionui 和 telegram
+ */
+const migration_v14: IMigration = {
+  version: 14,
+  name: 'Remove lark and dingtalk from type constraints',
+  up: (db) => {
+    // 1. Recreate assistant_plugins without lark and dingtalk
     db.exec(`
-      CREATE TABLE IF NOT EXISTS conversations_rollback (
+      CREATE TABLE IF NOT EXISTS assistant_plugins_new (
+        id TEXT PRIMARY KEY,
+        type TEXT NOT NULL CHECK(type IN ('telegram', 'slack', 'discord')),
+        name TEXT NOT NULL,
+        enabled INTEGER NOT NULL DEFAULT 0,
+        config TEXT NOT NULL,
+        status TEXT CHECK(status IN ('created', 'initializing', 'ready', 'starting', 'running', 'stopping', 'stopped', 'error')),
+        last_connected INTEGER,
+        created_at INTEGER NOT NULL,
+        updated_at INTEGER NOT NULL
+      );
+
+      INSERT OR IGNORE INTO assistant_plugins_new SELECT * FROM assistant_plugins WHERE type IN ('telegram', 'slack', 'discord');
+
+      DROP TABLE IF EXISTS assistant_plugins;
+
+      ALTER TABLE assistant_plugins_new RENAME TO assistant_plugins;
+
+      CREATE INDEX IF NOT EXISTS idx_assistant_plugins_type ON assistant_plugins(type);
+      CREATE INDEX IF NOT EXISTS idx_assistant_plugins_enabled ON assistant_plugins(enabled);
+    `);
+
+    // 2. Recreate conversations without lark and dingtalk in source
+    db.exec(`
+      UPDATE conversations SET source = NULL WHERE source IN ('lark', 'dingtalk');
+    `);
+
+    db.exec(`
+      CREATE TABLE IF NOT EXISTS conversations_new (
         id TEXT PRIMARY KEY,
         user_id TEXT NOT NULL,
         name TEXT NOT NULL,
@@ -624,17 +664,18 @@ const migration_v13: IMigration = {
         extra TEXT NOT NULL,
         model TEXT,
         status TEXT CHECK(status IN ('pending', 'running', 'finished')),
-        source TEXT CHECK(source IS NULL OR source IN ('aionui', 'telegram', 'lark')),
+        source TEXT CHECK(source IS NULL OR source IN ('aionui', 'telegram')),
+        channel_chat_id TEXT,
         created_at INTEGER NOT NULL,
         updated_at INTEGER NOT NULL,
         FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
       );
 
-      INSERT INTO conversations_rollback (id, user_id, name, type, extra, model, status, source, created_at, updated_at)
-      SELECT id, user_id, name, type, extra, model, status, source, created_at, updated_at FROM conversations;
+      INSERT INTO conversations_new (id, user_id, name, type, extra, model, status, source, channel_chat_id, created_at, updated_at)
+      SELECT id, user_id, name, type, extra, model, status, source, channel_chat_id, created_at, updated_at FROM conversations;
 
       DROP TABLE conversations;
-      ALTER TABLE conversations_rollback RENAME TO conversations;
+      ALTER TABLE conversations_new RENAME TO conversations;
 
       CREATE INDEX IF NOT EXISTS idx_conversations_user_id ON conversations(user_id);
       CREATE INDEX IF NOT EXISTS idx_conversations_updated_at ON conversations(updated_at);
@@ -642,9 +683,68 @@ const migration_v13: IMigration = {
       CREATE INDEX IF NOT EXISTS idx_conversations_user_updated ON conversations(user_id, updated_at DESC);
       CREATE INDEX IF NOT EXISTS idx_conversations_source ON conversations(source);
       CREATE INDEX IF NOT EXISTS idx_conversations_source_updated ON conversations(source, updated_at DESC);
+      CREATE INDEX IF NOT EXISTS idx_conversations_source_chat ON conversations(source, channel_chat_id, updated_at DESC);
     `);
 
-    console.log('[Migration v13] Rolled back: Removed dingtalk and channel_chat_id');
+    console.log('[Migration v14] Removed lark and dingtalk from type constraints');
+  },
+  down: (db) => {
+    // Rollback: Add back lark to assistant_plugins
+    db.exec(`
+      CREATE TABLE IF NOT EXISTS assistant_plugins_old (
+        id TEXT PRIMARY KEY,
+        type TEXT NOT NULL CHECK(type IN ('telegram', 'slack', 'discord', 'lark')),
+        name TEXT NOT NULL,
+        enabled INTEGER NOT NULL DEFAULT 0,
+        config TEXT NOT NULL,
+        status TEXT CHECK(status IN ('created', 'initializing', 'ready', 'starting', 'running', 'stopping', 'stopped', 'error')),
+        last_connected INTEGER,
+        created_at INTEGER NOT NULL,
+        updated_at INTEGER NOT NULL
+      );
+
+      INSERT OR IGNORE INTO assistant_plugins_old SELECT * FROM assistant_plugins;
+
+      DROP TABLE IF EXISTS assistant_plugins;
+
+      ALTER TABLE assistant_plugins_old RENAME TO assistant_plugins;
+
+      CREATE INDEX IF NOT EXISTS idx_assistant_plugins_type ON assistant_plugins(type);
+      CREATE INDEX IF NOT EXISTS idx_assistant_plugins_enabled ON assistant_plugins(enabled);
+    `);
+
+    // Rollback: Add back lark and dingtalk to conversations
+    db.exec(`
+      CREATE TABLE IF NOT EXISTS conversations_old (
+        id TEXT PRIMARY KEY,
+        user_id TEXT NOT NULL,
+        name TEXT NOT NULL,
+        type TEXT NOT NULL CHECK(type IN ('gemini', 'acp', 'codex', 'nanobot')),
+        extra TEXT NOT NULL,
+        model TEXT,
+        status TEXT CHECK(status IN ('pending', 'running', 'finished')),
+        source TEXT CHECK(source IS NULL OR source IN ('aionui', 'telegram', 'lark', 'dingtalk')),
+        channel_chat_id TEXT,
+        created_at INTEGER NOT NULL,
+        updated_at INTEGER NOT NULL,
+        FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+      );
+
+      INSERT OR IGNORE INTO conversations_old SELECT * FROM conversations;
+
+      DROP TABLE conversations;
+      ALTER TABLE conversations_old RENAME TO conversations;
+
+      CREATE INDEX IF NOT EXISTS idx_conversations_user_id ON conversations(user_id);
+      CREATE INDEX IF NOT EXISTS idx_conversations_updated_at ON conversations(updated_at);
+      CREATE INDEX IF NOT EXISTS idx_conversations_type ON conversations(type);
+      CREATE INDEX IF NOT EXISTS idx_conversations_user_updated ON conversations(user_id, updated_at DESC);
+      CREATE INDEX IF NOT EXISTS idx_conversations_source ON conversations(source);
+      CREATE INDEX IF NOT EXISTS idx_conversations_source_updated ON conversations(source, updated_at DESC);
+      CREATE INDEX IF NOT EXISTS idx_conversations_source_chat ON conversations(source, channel_chat_id, updated_at DESC);
+    `);
+
+    console.log('[Migration v14] Rolled back: Added lark and dingtalk back to type constraints');
   },
 };
 
@@ -655,6 +755,7 @@ const migration_v13: IMigration = {
 export const ALL_MIGRATIONS: IMigration[] = [
   migration_v1, migration_v2, migration_v3, migration_v4, migration_v5, migration_v6,
   migration_v7, migration_v8, migration_v9, migration_v10, migration_v11, migration_v13,
+  migration_v14,
 ];
 
 /**
