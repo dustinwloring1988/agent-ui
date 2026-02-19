@@ -202,7 +202,7 @@ try {
     env: {
       ...process.env,
       ELECTRON_BUILDER_ARCH: targetArch,
-      FORGE_SKIP_NATIVE_REBUILD: 'false'  // Ensure native modules are rebuilt during packaging
+      FORGE_SKIP_NATIVE_REBUILD: 'true'  // Skip native module rebuild to avoid Spectre library issues
     }
   });
 

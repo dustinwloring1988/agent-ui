@@ -90,10 +90,11 @@ module.exports = {
     tmpdir: path.resolve(__dirname, '../agent-ui-tmp'),
     extraResource: [path.resolve(__dirname, 'public')],
     win32metadata: {
-      CompanyName: 'dustinloring',
+      CompanyName: 'AgentUi',
+      LegalCopyright: 'Copyright © 2026 AgentUi',
       FileDescription: 'AI Agent Desktop Interface',
       OriginalFilename: 'AgentUI.exe',
-      ProductName: 'Agent UI',
+      ProductName: 'AgentUi',
       InternalName: 'AgentUI',
       FileVersion: packageJson.version,
       ProductVersion: packageJson.version,
